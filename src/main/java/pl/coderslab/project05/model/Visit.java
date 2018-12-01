@@ -27,7 +27,7 @@ public class Visit {
     @CreationTimestamp
     private Date date;
 
-    @NotNull
+
     private Date DateOfVisit;
 
 //-------------------------

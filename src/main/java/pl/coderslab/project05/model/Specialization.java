@@ -29,7 +29,7 @@ public class Specialization {
     private String specialType;
 
 
-    @NotNull
+
     @OneToMany(mappedBy = "specialization")
     private List<Doctor> doctors = new ArrayList<>();
 

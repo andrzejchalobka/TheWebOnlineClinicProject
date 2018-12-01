@@ -93,10 +93,7 @@ public class LoginControllerJsp {
 
 
 
-    @GetMapping("/admin/home")
-    public String LoggedHome() {
-        return "logged";
-    }
+
 
 
 

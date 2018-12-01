@@ -17,7 +17,7 @@
 
     Email : <br><form:input path="email"/><br>
 
-    Pass : <br><form:input path="password"/><br>
+    Pass : <br><form:password path="password"/><br>
 
     <form:errors path="*"/>
 

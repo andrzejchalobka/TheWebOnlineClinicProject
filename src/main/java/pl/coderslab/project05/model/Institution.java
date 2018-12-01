@@ -24,11 +24,11 @@ public class Institution {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotNull
+
     private String town;
-    @NotNull
+
     private String adress;
-    @NotNull
+
     private int number;
 
     @OneToMany(mappedBy = "institution")
