@@ -30,9 +30,13 @@ public class Visit {
     @NotNull
     private Date DateOfVisit;
 
-    @ManyToOne
-    private Patient patient;
+//-------------------------
+//    @ManyToOne
+//    private Patient patient;
 
+    @ManyToOne
+    private User user;
+//-------------------------
     @ManyToOne
     private Doctor doctor;
 

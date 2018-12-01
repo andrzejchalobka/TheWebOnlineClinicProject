@@ -29,10 +29,6 @@ public class Doctor {
     @NotNull
     private String surname;
 
-//    @OneToOne//(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "specialization_id") - to jest opcjonalne
-//    @NotNull
-//    private Specialization specialization;
 
     @ManyToOne
     private Specialization specialization;
@@ -40,8 +36,5 @@ public class Doctor {
     @OneToMany(mappedBy = "doctor")
     private List<Visit> visits = new ArrayList<>();
 
-    @NotNull
-    private String patient;
-    @NotNull
-    private String instituion;
+
 }
