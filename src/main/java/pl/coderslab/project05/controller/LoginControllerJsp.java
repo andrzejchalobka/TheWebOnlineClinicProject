@@ -24,6 +24,11 @@ public class LoginControllerJsp {
         return "start";
     }
 
+    @GetMapping("/logout")
+    public String Logout() {
+        return "logout";
+    }
+
     @GetMapping("/infoinst")
     public String infoInst() {
         return "infoinstitution";
@@ -77,6 +82,8 @@ public class LoginControllerJsp {
 
             return "registersucces";
         }
+
+
 
     }
 

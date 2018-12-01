@@ -14,6 +14,7 @@ Użytkownik o imieniu ${user.name} zalogwał się w naszej bazie.<br>
 
 Proszę sprawdź swój adres mejlowy ${user.email} wyslalismy na niego potwierdzenie<br>
 
-
+Przejdz do strony logowania
+<a href="/login">Zaloguj sie</a>
 </body>
 </html>

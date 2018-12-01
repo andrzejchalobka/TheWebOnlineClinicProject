@@ -8,5 +8,7 @@
 </head>
 <body>
 Gratulacje ${user.name} poprawnie się zalogowales!
+
+<a href="/logout"/>Wyloguj </a>
 </body>
 </html>

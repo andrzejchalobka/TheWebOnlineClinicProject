@@ -5,37 +5,32 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "visit")
-public class Visit {
+@Table(name = "specialization")
+public class Specialization {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @CreationTimestamp
-    private Date date;
 
     @NotNull
-    private Date DateOfVisit;
+    private String specialType;
 
-    @ManyToOne
-    private Patient patient;
 
-    @ManyToOne
-    private Doctor doctor;
+    @NotNull
+    @OneToMany(mappedBy = "specialization")
+    private List<Doctor> doctors = new ArrayList<>();
 
-    @ManyToOne
-    private Institution institution;
 }

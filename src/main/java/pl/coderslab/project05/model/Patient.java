@@ -1,41 +1,35 @@
 package pl.coderslab.project05.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "visit")
-public class Visit {
+@Table(name = "patient")
+public class Patient {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @CreationTimestamp
-    private Date date;
-
     @NotNull
-    private Date DateOfVisit;
+    private String name;
+    @NotNull
+    private String surname;
 
-    @ManyToOne
-    private Patient patient;
-
-    @ManyToOne
-    private Doctor doctor;
-
-    @ManyToOne
-    private Institution institution;
+    @OneToMany(mappedBy = "patient")
+    private List<Visit> visits = new ArrayList<>();
 }
+

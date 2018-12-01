@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
 
     @GetMapping("/test")
-    @ResponseBody
+
     public String goHomeStart() {
-        return "User test";
+        return "logged";
     }
 }
