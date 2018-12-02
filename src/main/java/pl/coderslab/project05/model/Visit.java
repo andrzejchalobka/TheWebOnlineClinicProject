@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.sql.Date;
+import java.sql.Time;
 
 //@Data
 //@Builder
@@ -27,6 +28,11 @@ public class Visit {
     private Date date;
 
     private Date DateOfVisit;
+
+
+    private Time timeOfVisit;
+
+
 
 //-------------------------
 //    @ManyToOne

@@ -14,6 +14,7 @@ import pl.coderslab.project05.model.*;
 import pl.coderslab.project05.repository.*;
 
 import javax.validation.Valid;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -58,6 +59,12 @@ public class VisitController {
         return userRepository.findAll();
     }
 
+    @ModelAttribute("hours")
+    public Collection<VisitTime> getHours() {
+        VisitTime[] visitTimes = {new VisitTime("09:00"),new VisitTime("09:30"),new VisitTime("10:00"),new VisitTime("10:30")};
+
+        return Arrays.asList(visitTimes);
+    }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String AddVisit(Model model) {

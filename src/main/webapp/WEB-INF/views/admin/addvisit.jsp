@@ -15,6 +15,8 @@
 
     Data : <br> <form:input path="dateOfVisit" type="date"/><br>
 
+    Time : <br> <form:select path="timeOfVisit" items="${hours}" itemValue="hourMinute" itemLabel="hourMinute"/><br>
+
     Doctor:<br> <form:select path="doctor.id" items="${doctors}" itemValue="id" itemLabel="fullName"/><br>
 
 <br>TEST<br>
