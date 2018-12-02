@@ -1,10 +1,7 @@
 package pl.coderslab.project05.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -13,8 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Data
-@Builder
+//@Data
+//@Builder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -31,10 +30,10 @@ public class Doctor {
     private String surname;
 
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Specialization specialization;
 
-    @OneToMany(mappedBy = "doctor")
+    @OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY)
     private List<Visit> visits = new ArrayList<>();
 
 

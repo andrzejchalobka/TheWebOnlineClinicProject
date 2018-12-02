@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.Set;
 
 @Data
-@Builder
+//@Builder
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -54,7 +55,7 @@ public class User {
     private Set<Role> roles;
 
     @Column(name = "visits")
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Visit> visits = new ArrayList<>();
 
 }

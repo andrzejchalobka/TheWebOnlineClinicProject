@@ -12,10 +12,11 @@ import pl.coderslab.project05.model.Specialization;
 import pl.coderslab.project05.repository.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
-@RequestMapping("/admin")
-public class AdminController {
+@RequestMapping("/admin/specialization")
+public class SpecializationController {
 
     DoctorRepository doctorRepository;
     InstitutionRepository institutionRepository;
@@ -25,7 +26,7 @@ public class AdminController {
     VisitRepository visitRepository;
 
     @Autowired
-    public AdminController(DoctorRepository doctorRepository, InstitutionRepository institutionRepository, RoleRepository roleRepository, SpecializationRepository specializationRepository, UserRepository userRepository, VisitRepository visitRepository) {
+    public SpecializationController(DoctorRepository doctorRepository, InstitutionRepository institutionRepository, RoleRepository roleRepository, SpecializationRepository specializationRepository, UserRepository userRepository, VisitRepository visitRepository) {
         this.doctorRepository = doctorRepository;
         this.institutionRepository = institutionRepository;
         this.roleRepository = roleRepository;
@@ -41,8 +42,7 @@ public class AdminController {
 
 
 
-
-    @RequestMapping(value = "/addspecialization",method = RequestMethod.GET)
+    @RequestMapping(value = "/add",method = RequestMethod.GET)
     public String AddSpecialization(Model model){
         Specialization specialization = new Specialization();
         model.addAttribute("specialization",specialization);
@@ -50,23 +50,24 @@ public class AdminController {
 
     }
 
-    @RequestMapping(value = "/addspecialization",method = RequestMethod.POST)
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String AddSpecialization(@Valid @ModelAttribute Specialization specialization, BindingResult result){
         if( result.hasErrors()){
             return "admin/addspecialization";
         }
         specializationRepository.save(specialization);
-        return "redirect:/admin/home";
+        return "redirect:/admin/specialization/show";
     }
 
-//    @PostMapping("/add")
-//    public String addUser(@Valid @ModelAttribute User user, BindingResult result) {
-//        if (result.hasErrors()) {
-//            return "addUser";
-//        }
-//        userRepository.save(user);
-//        return "redirect:/user/all";
-//    }
+    @RequestMapping(path = "/show", method = RequestMethod.GET)
+    public String AllSpecialization(Model model) {
+
+        List<Specialization> specializations = specializationRepository.findAll();
+
+        model.addAttribute("specializations", specializations);
+
+        return "admin/allspecialization";
+    }
 
 
 
