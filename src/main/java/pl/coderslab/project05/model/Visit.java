@@ -32,7 +32,7 @@ public class Visit {
 //    @ManyToOne
 //    private Patient patient;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE})
     private User user;
 //-------------------------
     @ManyToOne(fetch = FetchType.LAZY)

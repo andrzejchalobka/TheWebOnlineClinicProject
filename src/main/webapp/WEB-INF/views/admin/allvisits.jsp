@@ -10,6 +10,8 @@
 
 <c:forEach items="${visits}" var="visit">
 
+    User: <br>${visit.user.fullName}<br>
+
     No of Visit: <br>${visit.id}<br>
 
     Doctor name: <br>${visit.doctor.fullName}<br>

@@ -2,6 +2,8 @@ package pl.coderslab.project05.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -71,6 +73,10 @@ public class VisitController {
         if (result.hasErrors()) {
             return "admin/addvisit";
         }
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentPrincipalEmail = authentication.getName();
+        User loggedInUser = this.userRepository.findByEmail(currentPrincipalEmail);
+        visit.setUser(loggedInUser);
         visitRepository.save(visit);
         return "redirect:/admin/visit/show";
 
@@ -78,8 +84,9 @@ public class VisitController {
 
     @RequestMapping(path = "/show", method = RequestMethod.GET)
     public String AllVisit(Model model) {
-
-        List<Visit> visits = visitRepository.findAll();
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentPrincipalEmail = authentication.getName();
+        List<Visit> visits = visitRepository.findAllByUserEmail(currentPrincipalEmail);
 
         model.addAttribute("visits", visits);
 

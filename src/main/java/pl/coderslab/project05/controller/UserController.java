@@ -49,12 +49,18 @@ public class UserController {
 //        return "allvisits";
 //    }
 //
-//
-//    @GetMapping("/test")
-//
-//    public String goHomeStart() {
-//        return "logged";
-//    }
+// Komunikat po zalogowaniu sie
+    @GetMapping("/test")
+
+    public String goHomeStart() {
+        return "logged";
+    }
+
+    @GetMapping("/test2")
+
+    public String vie() {
+        return "home2";
+    }
 
 
 }

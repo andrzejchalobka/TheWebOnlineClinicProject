@@ -10,19 +10,17 @@
 
 <form:form method="post" modelAttribute="visit">
 
+
+    <%--User : <br> <form:input path="user"/><br>--%>
+
     Data : <br> <form:input path="dateOfVisit" type="date"/><br>
 
+    Doctor:<br> <form:select path="doctor.id" items="${doctors}" itemValue="id" itemLabel="fullName"/><br>
 
-
-    <%--Full name: <br><form:input path="user"/><br>--%>
-
-    <%--Institution : <br><form:input path="institution"/><br>--%>
-
-    <%--Doctor : <br><form:input path="doctor"/><br>--%>
-    <%--Specizalization : <br><form:select path="specialization.id" items="${specialization}" itemValue="id" itemLabel="specialType"/><br>--%>
-    Doctor <form:select path="doctor.id" items="${doctors}" itemValue="id" itemLabel="fullName"/>
+<br>TEST<br>
 
     Institution: <form:select path="institution.id" items="${institutions}" itemValue="id" itemLabel="adress"/>
+
 
 
     <form:errors path="*"/>
