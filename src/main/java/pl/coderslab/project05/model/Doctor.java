@@ -36,5 +36,9 @@ public class Doctor {
     @OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY)
     private List<Visit> visits = new ArrayList<>();
 
+    public String getFullName() {
+        return name + " " + surname;
+    }
+
 
 }

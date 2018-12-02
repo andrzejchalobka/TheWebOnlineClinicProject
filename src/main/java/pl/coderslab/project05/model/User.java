@@ -58,4 +58,10 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Visit> visits = new ArrayList<>();
 
+
+    public String getFullName() {
+        return name + " " + lastName;
+    }
+
+
 }

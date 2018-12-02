@@ -32,4 +32,9 @@ public class Institution {
 
     @OneToMany(mappedBy = "institution", fetch = FetchType.LAZY)
     private List<Visit> visits = new ArrayList<>();
+
+    public String getAdress() {
+        return adress + " " + number +" " + town;
+    }
+
 }

@@ -35,21 +35,26 @@ public class UserController {
 
 
 
-    @RequestMapping(path = "/allvisits", method = RequestMethod.GET)
-    public String mainPage(Model model) {
-
-        List<Visit> visits = visitRepository.findAll();
-        model.addAttribute("visits", visits);
-
-        return "allvisits";
-    }
 
 
-    @GetMapping("/test")
 
-    public String goHomeStart() {
-        return "logged";
-    }
+
+
+//    @RequestMapping(path = "/allvisits", method = RequestMethod.GET)
+//    public String mainPage(Model model) {
+//
+//        List<Visit> visits = visitRepository.findAll();
+//        model.addAttribute("visits", visits);
+//
+//        return "allvisits";
+//    }
+//
+//
+//    @GetMapping("/test")
+//
+//    public String goHomeStart() {
+//        return "logged";
+//    }
 
 
 }

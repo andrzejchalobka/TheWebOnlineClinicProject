@@ -6,7 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.sql.Date;
 
 //@Data
 //@Builder
@@ -23,9 +23,8 @@ public class Visit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @CreationTimestamp
+//    @CreationTimestamp
     private Date date;
-
 
     private Date DateOfVisit;
 
