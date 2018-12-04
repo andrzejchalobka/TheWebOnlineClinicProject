@@ -17,7 +17,7 @@
 
     Specialization: <br><form:input path="specialType"/>
     <form:errors path="*"/>
-    <%--<form:hidden path="id"/>--%>
+    <form:hidden path="id"/>
     <input type="submit" value="Add Specialization"/>
 
 </form:form>

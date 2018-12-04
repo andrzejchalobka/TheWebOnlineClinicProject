@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import pl.coderslab.project05.model.Doctor;
 import pl.coderslab.project05.model.Specialization;
 import pl.coderslab.project05.repository.*;
 
@@ -69,6 +67,26 @@ public class SpecializationController {
         return "specialization/allspecialization";
     }
 
+    @GetMapping("/delete/{id}")
+    public String deleteSpec(@PathVariable long id) {
+        specializationRepository.deleteById(id);
+        return "redirect:/admin/specialization/show";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String editSpec(Model model, @PathVariable long id) {
+        model.addAttribute("specialization", specializationRepository.findById(id));
+        return "specialization/addspecialization";
+    }
+
+    @PostMapping("edit/**")
+    public String editSpec(@Valid @ModelAttribute Specialization specialization, BindingResult result) {
+        if (result.hasErrors()) {
+            return "specialization/addspecialization";
+        }
+        specializationRepository.save(specialization);
+        return "redirect:/admin/specialization/show";
+    }
 
 
 
