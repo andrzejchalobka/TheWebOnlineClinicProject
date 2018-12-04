@@ -1,6 +1,7 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -10,7 +11,6 @@
 </head>
 <body>
 
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
@@ -19,7 +19,7 @@
 
 
         <div class="col-md-12">
-            <h4>Bootstrap Snipp for Datatable</h4>
+
             <div class="table-responsive">
 
 
@@ -27,41 +27,52 @@
 
                     <thead>
 
-                    <th><input type="checkbox" id="checkall" /></th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Address</th>
-                    <th>Email</th>
+
+                    <th>Client</th>
+                    <th>No of visit</th>
+                    <th>Doctor name</th>
+                    <th>Date of Visit</th>
+                    <th>Time</th>
+                    <th>Specialization</th>
+                    <th>Adress</th>
                     <th>Edit</th>
                     <th>Delete</th>
                     </thead>
                     <tbody>
-
+    <c:forEach items="${visits}" var="visit">
                     <tr>
-                        <td><input type="checkbox" class="checkthis" /></td>
-                        <td>Andrzej</td>
-                        <td>Chalobka</td>
-                        <td>Krakow</td>
-                        <td>szalupka@wp.pl</td>
+
+                        <td>${visit.user.fullName}</td>
+                        <td>${visit.id}</td>
+                        <td>${visit.doctor.fullName}</td>
+                        <td>${visit.dateOfVisit}</td>
+                        <td>${visit.timeOfVisit}</td>
+                        <td>${visit.doctor.specialization.specialType}</td>
+                        <td>${visit.institution.adress}</td>
+
+
+
+
 
                         <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                         <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
                     </tr>
+                    </c:forEach>
 
                     </tbody>
 
                 </table>
 
-                <div class="clearfix"></div>
-                <ul class="pagination pull-right">
-                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                </ul>
+                <%--<div class="clearfix"></div>--%>
+                <%--<ul class="pagination pull-right">--%>
+                    <%--<li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>--%>
+                    <%--<li class="active"><a href="#">1</a></li>--%>
+                    <%--<li><a href="#">2</a></li>--%>
+                    <%--<li><a href="#">3</a></li>--%>
+                    <%--<li><a href="#">4</a></li>--%>
+                    <%--<li><a href="#">5</a></li>--%>
+                    <%--<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>--%>
+                <%--</ul>--%>
 
             </div>
 
@@ -104,5 +115,8 @@
 
 
 </div>
+</body>
+</html>
+
 </body>
 </html>
