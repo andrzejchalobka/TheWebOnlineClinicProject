@@ -30,7 +30,7 @@ public class DoctorController {
 
 
     @ModelAttribute("specialization")
-    public Collection<Specialization> SpecializationAll(){
+    public Collection<Specialization> SpecializationAll() {
         return specializationRepository.findAll();
     }
 
@@ -57,52 +57,30 @@ public class DoctorController {
     public String AllDoctors(Model model) {
 
         List<Doctor> doctors = doctorRepository.findAll();
-
         model.addAttribute("doctors", doctors);
 
         return "doctor/alldoctor";
     }
 
-
     @GetMapping("/delete/{id}")
-    public String deleteDoctor(@PathVariable long id){
-//        Doctor doctor = doctorRepository.findAllById(id);
+    public String deleteDoctor(@PathVariable long id) {
         doctorRepository.deleteById(id);
         return "redirect:/admin/doctor/show";
     }
 
-
     @GetMapping("/edit/{id}")
-    public String editDoctor(Model model, @PathVariable long id){
+    public String editDoctor(Model model, @PathVariable long id) {
         model.addAttribute("doctor", doctorRepository.findById(id));
         return "doctor/adddoctor";
-
     }
+
     @PostMapping("edit/**")
-    public String editDoctor(@Valid @ModelAttribute Doctor doctor, BindingResult result){
-        if( result.hasErrors()){
+    public String editDoctor(@Valid @ModelAttribute Doctor doctor, BindingResult result) {
+        if (result.hasErrors()) {
             return "doctor/adddoctor";
         }
         doctorRepository.save(doctor);
         return "redirect:/admin/doctor/show";
     }
-
-
-
-
-//    @GetMapping("/edit/{id}")
-//    public String editUser(Model model, @PathVariable long id) {
-//        model.addAttribute("user", userRepository.findOne(id));
-//        return "addUser";
-//    }
-//    @PostMapping("/edit/**")
-//    public String editUser(@Valid @ModelAttribute User user, BindingResult result) {
-//        if (result.hasErrors()) {
-//            return "addUser";
-//        }
-//        userRepository.save(user);
-//        return "redirect:/user/all";
-//    }
-
 
 }
