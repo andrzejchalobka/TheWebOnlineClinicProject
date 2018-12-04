@@ -31,12 +31,12 @@ public class LoginControllerJsp {
 
     @GetMapping("/infoinst")
     public String infoInst() {
-        return "infoinstitution";
+        return "institution/infoinstitution";
     }
 
     @GetMapping("/userinfo")
     public String UserInfo(Model model) {
-        return "userinfo";
+        return "user/userinfo";
     }
 
 

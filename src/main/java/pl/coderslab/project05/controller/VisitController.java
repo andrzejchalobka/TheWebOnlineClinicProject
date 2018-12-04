@@ -70,7 +70,7 @@ public class VisitController {
     public String AddVisit(Model model) {
         Visit visit = new Visit();
         model.addAttribute("visit", visit);
-        return "admin/addvisit";
+        return "visits/addvisit";
 
     }
 
@@ -78,7 +78,7 @@ public class VisitController {
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String AddVisit(@Valid @ModelAttribute Visit visit, BindingResult result) {
         if (result.hasErrors()) {
-            return "admin/addvisit";
+            return "visits/addvisit";
         }
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalEmail = authentication.getName();
@@ -97,7 +97,7 @@ public class VisitController {
 
         model.addAttribute("visits", visits);
 
-        return "admin/allvisits";
+        return "visits/allvisits";
     }
 
 }

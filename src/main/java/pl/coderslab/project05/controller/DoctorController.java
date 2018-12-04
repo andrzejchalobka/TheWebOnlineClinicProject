@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.project05.model.Doctor;
 import pl.coderslab.project05.model.Specialization;
 import pl.coderslab.project05.repository.DoctorRepository;
@@ -41,14 +39,14 @@ public class DoctorController {
     public String AddDoctor(Model model) {
         Doctor doctor = new Doctor();
         model.addAttribute("doctor", doctor);
-        return "admin/adddoctor";
+        return "doctor/adddoctor";
 
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String AddDoctor(@Valid @ModelAttribute Doctor doctor, BindingResult result) {
         if (result.hasErrors()) {
-            return "admin/adddoctor";
+            return "doctor/adddoctor";
         }
         doctorRepository.save(doctor);
         return "redirect:/admin/doctor/show";
@@ -62,8 +60,49 @@ public class DoctorController {
 
         model.addAttribute("doctors", doctors);
 
-        return "admin/alldoctor";
+        return "doctor/alldoctor";
     }
+
+
+    @GetMapping("/delete/{id}")
+    public String deleteDoctor(@PathVariable long id){
+//        Doctor doctor = doctorRepository.findAllById(id);
+        doctorRepository.deleteById(id);
+        return "redirect:/admin/doctor/show";
+    }
+
+
+    @GetMapping("/edit/{id}")
+    public String editDoctor(Model model, @PathVariable long id){
+        model.addAttribute("doctor", doctorRepository.findById(id));
+        return "doctor/adddoctor";
+
+    }
+    @PostMapping("edit/**")
+    public String editDoctor(@Valid @ModelAttribute Doctor doctor, BindingResult result){
+        if( result.hasErrors()){
+            return "doctor/adddoctor";
+        }
+        doctorRepository.save(doctor);
+        return "redirect:/admin/doctor/show";
+    }
+
+
+
+
+//    @GetMapping("/edit/{id}")
+//    public String editUser(Model model, @PathVariable long id) {
+//        model.addAttribute("user", userRepository.findOne(id));
+//        return "addUser";
+//    }
+//    @PostMapping("/edit/**")
+//    public String editUser(@Valid @ModelAttribute User user, BindingResult result) {
+//        if (result.hasErrors()) {
+//            return "addUser";
+//        }
+//        userRepository.save(user);
+//        return "redirect:/user/all";
+//    }
 
 
 }

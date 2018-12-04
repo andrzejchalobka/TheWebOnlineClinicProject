@@ -1,12 +1,12 @@
 package pl.coderslab.project05.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.project05.model.Visit;
 import pl.coderslab.project05.repository.*;
 
@@ -33,25 +33,7 @@ public class UserController {
         this.visitRepository = visitRepository;
     }
 
-
-
-
-
-
-
-
-//    @RequestMapping(path = "/allvisits", method = RequestMethod.GET)
-//    public String mainPage(Model model) {
-//
-//        List<Visit> visits = visitRepository.findAll();
-//        model.addAttribute("visits", visits);
-//
-//        return "allvisits";
-//    }
-//
-// Komunikat po zalogowaniu sie
     @GetMapping("/test")
-
     public String goHomeStart() {
         return "logged";
     }
@@ -59,8 +41,24 @@ public class UserController {
     @GetMapping("/test2")
 
     public String vie() {
-        return "home2";
+        return "databaseview";
     }
+
+//    @GetMapping("/info")
+//    public String UserInfo(Model model){
+//
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        String currentPrincipalEmail = authentication.getName();
+//        List<Visit> user = userRepository.findAllByUserEmail(currentPrincipalEmail);
+//
+//        model.addAttribute("user",user);
+//
+//
+//        return "user/userinfo";
+//
+//    }
+
+
 
 
 }

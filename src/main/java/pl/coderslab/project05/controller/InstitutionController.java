@@ -26,16 +26,15 @@ public class InstitutionController {
     }
 
 
-
-    @RequestMapping(path = "/show", method = RequestMethod.GET)
-    public String AllInstitution(Model model) {
-
-        List<Institution> institutions = institutionRepository.findAll();
-
-        model.addAttribute("institution", institutions);
-
-        return "admin/allinstitution";
+//Mozna sprobowac wyswietlic dla kazdej instutucji to samo
+    @RequestMapping(path="/info", method = RequestMethod.GET)
+    public String InfoInstitution(){
+        return "institution/infoinstitution";
     }
+
+
+
+
 
 
 
@@ -45,18 +44,28 @@ public class InstitutionController {
         Institution institution = new Institution();
         model.addAttribute("institution",institution);
 
-        return "admin/addinstitution";
+        return "institution/addinstitution";
 
 }
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String AddInstitution(@Valid @ModelAttribute Institution institution, BindingResult result){
         if( result.hasErrors()){
-            return "admin/addinstitution";
+            return "institution/addinstitution";
         }
         institutionRepository.save(institution);
-        return "redirect:/admin/home";
+        return "redirect:/admin/institution/show";
 
+    }
+
+    @RequestMapping(path = "/show", method = RequestMethod.GET)
+    public String AllInstitution(Model model) {
+
+        List<Institution> institutions = institutionRepository.findAll();
+
+        model.addAttribute("institution", institutions);
+
+        return "institution/allinstitution";
     }
 
 }

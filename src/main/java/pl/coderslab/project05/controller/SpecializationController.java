@@ -46,14 +46,14 @@ public class SpecializationController {
     public String AddSpecialization(Model model){
         Specialization specialization = new Specialization();
         model.addAttribute("specialization",specialization);
-        return "admin/addspecialization";
+        return "specialization/addspecialization";
 
     }
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String AddSpecialization(@Valid @ModelAttribute Specialization specialization, BindingResult result){
         if( result.hasErrors()){
-            return "admin/addspecialization";
+            return "specialization/addspecialization";
         }
         specializationRepository.save(specialization);
         return "redirect:/admin/specialization/show";
@@ -66,7 +66,7 @@ public class SpecializationController {
 
         model.addAttribute("specializations", specializations);
 
-        return "admin/allspecialization";
+        return "specialization/allspecialization";
     }
 
 

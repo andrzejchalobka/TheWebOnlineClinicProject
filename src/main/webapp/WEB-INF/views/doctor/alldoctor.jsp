@@ -9,6 +9,7 @@
 
 <c:forEach items="${doctors}" var="doctor">
 
+    ${doctor.id}
     ${doctor.name}
     ${doctor.surname}
     ${doctor.specialization.specialType}
