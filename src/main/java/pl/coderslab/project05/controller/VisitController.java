@@ -7,9 +7,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.project05.model.*;
 import pl.coderslab.project05.repository.*;
 
@@ -71,9 +69,7 @@ public class VisitController {
         Visit visit = new Visit();
         model.addAttribute("visit", visit);
         return "visits/addvisit";
-
-    }
-
+}
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String AddVisit(@Valid @ModelAttribute Visit visit, BindingResult result) {
@@ -86,8 +82,7 @@ public class VisitController {
         visit.setUser(loggedInUser);
         visitRepository.save(visit);
         return "redirect:/admin/visit/show";
-
-    }
+}
 
     @RequestMapping(path = "/show", method = RequestMethod.GET)
     public String AllVisit(Model model) {
@@ -99,5 +94,32 @@ public class VisitController {
 
         return "visits/allvisits";
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteVisit(@PathVariable long id) {
+        visitRepository.deleteById(id);
+        return "redirect:/admin/visit/show";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String editVisit(Model model, @PathVariable long id) {
+        model.addAttribute("visit", visitRepository.findById(id));
+        return "visits/addvisit";
+    }
+
+    @PostMapping("edit/**")
+    public String editVisit(@Valid @ModelAttribute Visit visit, BindingResult result) {
+        if (result.hasErrors()) {
+            return "visits/addvisit";
+        }
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentPrincipalEmail = authentication.getName();
+        User loggedInUser = this.userRepository.findByEmail(currentPrincipalEmail);
+        visit.setUser(loggedInUser);
+        visitRepository.save(visit);
+        return "redirect:/admin/visit/show";
+    }
+
+
 
 }
