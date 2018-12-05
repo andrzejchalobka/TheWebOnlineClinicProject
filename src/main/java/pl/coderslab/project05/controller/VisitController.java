@@ -79,6 +79,7 @@ public class VisitController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalEmail = authentication.getName();
         User loggedInUser = this.userRepository.findByEmail(currentPrincipalEmail);
+
         visit.setUser(loggedInUser);
         visitRepository.save(visit);
         return "redirect:/admin/visit/show";
@@ -92,7 +93,7 @@ public class VisitController {
 
         model.addAttribute("visits", visits);
 
-        return "visits/allvisits2";
+        return "visits/allvisit3";
     }
 
     @GetMapping("/delete/{id}")

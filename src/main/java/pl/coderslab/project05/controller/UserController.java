@@ -39,11 +39,14 @@ public class UserController {
     }
 
     @GetMapping("/test2")
-
-    public String vie() {
-        return "databaseview";
+    public String testConnectionToCcs() {
+        return "user/test";
     }
 
+    @GetMapping("/main")
+    public String testConnectionToMain() {
+        return "admin/main";
+    }
 
 
 
