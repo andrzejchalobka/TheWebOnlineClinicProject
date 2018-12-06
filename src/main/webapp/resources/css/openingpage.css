@@ -1,0 +1,26 @@
+body {
+    /*background-color: #4CAF50;*/
+    background-image: url("/resources/img/about.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    /*background-attachment: fixed;*/
+}
+.mainheader {
+    color: black;
+    text-align:center;
+    text-shadow: black;
+    size: 84px;
+
+
+}
+.lowerheader {
+    text-align: center;
+    color: darkblue;
+
+}
+
+.teeth{
+    color:rebeccapurple;
+    text-align: center;
+}
+

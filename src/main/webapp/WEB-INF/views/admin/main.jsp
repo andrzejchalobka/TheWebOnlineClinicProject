@@ -58,6 +58,7 @@
     <li><a href="#Doctor">Twoi Lekarze</a></li>
     <li><a href="#Search">Sprawdz nasza placowke</a></li>
     <li><a href="#Institution">Skontaktuj sie z nami</a></li>
+    <li style="float:right"><a href="mailto:someone@example.com?cc=someoneelse@example.com&bcc=andsomeoneelse@example.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!" target="_top">Contact us</a></li>
     <li style="float:right"><a class="active" href="#about">Logout</a></li>
 </ul>
 
