@@ -2,12 +2,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-
+<link rel="stylesheet" href="/resources/css/logreg.css">
 
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
+
 <html>
 <head>
     <title>LOGIN</title>
+
 </head>
 <body>
 <form action="/login" method="post">

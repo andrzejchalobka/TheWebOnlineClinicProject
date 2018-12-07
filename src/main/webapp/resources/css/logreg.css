@@ -1,0 +1,7 @@
+body {
+    /*background-color: #4CAF50;*/
+    background-image: url("/resources/img/counter-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    /*background-attachment: fixed;*/
+}
