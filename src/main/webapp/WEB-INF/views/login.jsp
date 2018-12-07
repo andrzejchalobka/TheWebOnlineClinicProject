@@ -76,14 +76,14 @@
 
 
 
-                        <input class ="login-button" type="submit" value="Log In" >
+                        <input class ="button1" type="submit" value="Log In" >
 
             </form>
         </div>
     </div>
 </div>
 
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<%--<script type="text/javascript" src="assets/js/bootstrap.js"></script>--%>
 </body>
 
 

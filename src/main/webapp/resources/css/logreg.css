@@ -12,8 +12,10 @@ body, html{
     height: 100%;
     background-repeat: no-repeat;
     background-color: #d3d3d3;
-    font-family: 'Oxygen', sans-serif;
+    /*font-family: 'Oxygen', sans-serif;*/
+    font-family: "Lucida Console", Monaco, monospace;
     background-image: url("/resources/img/counter-bg.jpg");
+    /**/
 }
 
 .main{
@@ -77,4 +79,39 @@ input::-webkit-input-placeholder {
 .login-register{
     font-size: 11px;
     text-align: center;
+}
+
+.button1 {
+    /*display: table-cell;*/
+    /*position: center;*/
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #3399FF;
+    border: none;
+    border-radius: 15px;
+    /*box-shadow: 0 9px #999;*/
+    /*align-self: center;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*margin: 0 auto;*/
+    /*height:20px;*/
+    /*width:100px;*/
+    margin: -10px -50px;
+    position:relative;
+    top:20%;
+    left:50%;
+}
+
+.button1:hover {background-color: #b7efef}
+
+.button1:active {
+    background-color: #b7efef;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
