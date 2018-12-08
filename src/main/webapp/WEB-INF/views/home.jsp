@@ -48,7 +48,7 @@
     </tr>
     <tr>
         <td class="text-left">SPECIALIZATION</td>
-        <td class="text-left"><a href="/login">
+        <td class="text-left"><a href="/admin/specialization/show">
             <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
         </a></td>
     </tr>
