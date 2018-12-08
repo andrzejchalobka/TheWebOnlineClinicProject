@@ -33,6 +33,7 @@
     <h2><strong>Welcome on the official site of OnLineClinicProject</strong></h2><br>
 
 
+    <%--<div class="mainheader">--%>
     <p>Do You have an account please sign in </p>
 
 
@@ -42,8 +43,8 @@
 
     <a href="/registration" class="button1"/>Registration</a><br>
 
+<%--</div>--%>
 </div>
-
 
 <%--<div class="w3-container w3-section w3-blue" style="text-align: center">--%>
     <%--<h1>LINK1</h1>--%>

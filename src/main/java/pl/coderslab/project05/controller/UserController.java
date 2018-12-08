@@ -42,7 +42,7 @@ public class UserController {
     public String testConnectionToCcs() {
         return "user/test";
     }
-
+//Testin Controller to include jps file
     @GetMapping("/main")
     public String testConnectionToMain() {
         return "admin/main";

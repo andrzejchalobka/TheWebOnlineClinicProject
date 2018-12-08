@@ -5,6 +5,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="/resources/css/logreg.css">
 <html>
 <head>
     <title>STRONA GLOWNA</title>
@@ -52,18 +53,17 @@
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
 
-<ul>
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#Doctor">Twoj Profil</a></li>
-    <li><a href="#Doctor">Twoi Lekarze</a></li>
-    <li><a href="#Search">Sprawdz nasza placowke</a></li>
-    <li><a href="#Institution">Skontaktuj sie z nami</a></li>
-    <li style="float:right"><a href="mailto:someone@example.com?cc=someoneelse@example.com&bcc=andsomeoneelse@example.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!" target="_top">Contact us</a></li>
-    <li style="float:right"><a class="active" href="/logout">Logout</a></li>
-</ul>
+<%--<ul>--%>
+    <%--<li><a class="active" href="/">Home</a></li>--%>
+
+<%--</ul>--%>
+
+UZYTKOWNIK WYLOGOWANY POPRAWNIE
 
 </body>
 </html>
 
-</body>
+
+
+
 </html>

@@ -6,10 +6,12 @@ body {
     /*background-attachment: fixed;*/
 }
 .mainheader {
-    color: black;
-    text-align:center;
-    text-shadow: black;
-    size: 84px;
+    /*color: black;*/
+    /*text-align:center;*/
+    /*text-shadow: black;*/
+    /*size: 84px;*/
+    /*border-bottom: 6px solid blue;*/
+    background-color: #b6cfd3;
 
 
 }
