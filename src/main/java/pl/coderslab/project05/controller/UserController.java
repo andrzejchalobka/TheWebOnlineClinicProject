@@ -33,16 +33,21 @@ public class UserController {
         this.visitRepository = visitRepository;
     }
 
-    @GetMapping("/test")
+    @GetMapping("/home")
     public String goHomeStart() {
+
+
+
         return "logged";
     }
 
-    @GetMapping("/test2")
-    public String testConnectionToCcs() {
-        return "user/test";
-    }
-//Testin Controller to include jps file
+//    @GetMapping("/test2")
+//    public String testConnectionToCcs() {
+//        return "user/test";
+//    }
+
+
+//Testing Controller to include jps file
     @GetMapping("/main")
     public String testConnectionToMain() {
         return "admin/main";

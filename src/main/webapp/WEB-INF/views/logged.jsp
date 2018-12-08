@@ -4,11 +4,15 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>User logged</title>
+    <link rel="stylesheet" href="/resources/css/openingpage.css">
 </head>
 <body>
-Gratulacje ${user.name} poprawnie się zalogowales!
 
+
+
+Gratulacje ${user.name} poprawnie się zalogowales!
+aa
 <a href="/logout"/>Wyloguj </a>
 </body>
 </html>
