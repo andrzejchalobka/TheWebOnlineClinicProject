@@ -5,7 +5,6 @@
 <html>
 <link rel="stylesheet" href="/resources/css/tableOfContent.css">
 <link rel="stylesheet" href="/resources/css/openingpage.css">
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -15,7 +14,6 @@
 <jsp:include page="/user/main" />
 <head>
     <title>You are logged as : ${loggedInUser.name}</title>
-    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 </head>
 <body>
 <%--${user}--%>
@@ -23,40 +21,8 @@
     Welcome <strong>${loggedInUser.name}</strong><br>
     Yours current e-mail adress <strong>${user}</strong><br>
 </div>
-<div class="table-title">
-<h3>ADMIN PANEL</h3>
+<div class="tableofcontent">
+    aa
 </div>
-<table class="table-fill">
-    <thead>
-    <tr>
-        <th class="text-left">TYPE</th>
-        <th class="text-left">SHOW</th>
-    </tr>
-    </thead>
-    <tbody class="table-hover">
-    <tr>
-        <td class="text-left">INSTITUTION</td>
-        <td class="text-left">LINK</td>
-    </tr>
-    <tr>
-        <td class="text-left">SPECIALIZATION</td>
-        <td class="text-left">LINK</td>
-    </tr>
-    <tr>
-        <td class="text-left">DOCTOR</td>
-        <td class="text-left">LINK</td>
-    </tr>
-    <tr>
-        <td class="text-left">USER</td>
-        <td class="text-left">LINK</td>
-    </tr>
-    <tr>
-        <td class="text-left">VISITS</td>
-        <td class="text-left">LINK</td>
-    </tr>
-    </tbody>
-</table>
-
-
 </body>
 </html>
