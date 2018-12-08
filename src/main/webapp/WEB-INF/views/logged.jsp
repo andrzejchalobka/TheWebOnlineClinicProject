@@ -6,13 +6,24 @@
 <head>
     <title>User logged</title>
     <link rel="stylesheet" href="/resources/css/openingpage.css">
+    <jsp:include page="admin/main.jsp"/>
+    <style>
+        .title1{
+        text-align: center;
+        }
+    </style>
 </head>
+<style>
+
+</style>
 <body>
 
 
+<div class="title1">
+    <strong>Logged succesful</strong><br>
 
-Gratulacje ${user.name} poprawnie się zalogowales!
-aa
-<a href="/logout"/>Wyloguj </a>
+
+<a href="/user/home" class="button1"/>Home</a><br>
+</div>
 </body>
 </html>

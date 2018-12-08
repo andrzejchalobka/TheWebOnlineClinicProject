@@ -10,30 +10,18 @@
     <link rel="stylesheet" href="/resources/css/openingpage.css">
 
 
-    <jsp:include page="/user/main" />
+    <jsp:include page="/user/main"/>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-<%--<div class="mainheader" > <h1>OnLineClinicProject</h1></div>--%>
-
-
-<%--<div class="w3-container" style="text-align-all: center"/>--%>
-<%--&lt;%&ndash;<h2>Please log in to have a more details </h2><br>&ndash;%&gt;--%>
-<%--<div class="w3-panel w3-leftbar w3-border-blue w3-pale-blue" style="all-space-treatment: center">--%>
-<%--<a href="/login"> Login </a><br>--%>
-<%--&lt;%&ndash;<a>You don`t have an account ? Why not to registry !</a><br>&ndash;%&gt;--%>
-<%--<a href="/registration">Register</a><br>--%>
-<%--</div>--%>
-<%--</div>--%>
-
 
 
 <div class="w3-container" style="text-align: center">
     <h2><strong>Welcome on the official site of OnLineClinicProject</strong></h2><br>
 
 
-    <%--<div class="mainheader">--%>
+
     <p>Do You have an account please sign in </p>
 
 

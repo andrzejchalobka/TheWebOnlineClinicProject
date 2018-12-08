@@ -9,25 +9,61 @@
 <html>
 <head>
     <title>User Info</title>
+
+    <style>
+        body{
+            background-image: url("/resources/img/about.jpg");
+        }
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: -moz-left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #3399FF;
+        }
+
+    </style>
 </head>
 <body>
 <br><br>
 <div class="container-fluid well span6">
     <div class="row-fluid">
         <div class="span2" >
-            <%--<img src="https://secure.gravatar.com/avatar/de9b11d0f9c0569ba917393ed5e5b3ab?s=140&r=g&d=mm" class="img-circle">--%>
-        </div>
 
+            <img src="/resources/img/user1.png">
+        </div>
+        <div class="info">
         <div class="span8">
-            <h3>User Name ${user.name}</h3>
-            <h6>Email: ${user.email}</h6>
-            <h6>...</h6>
-            <h6>...</h6>
+
+
+            <h3>FULL: ${loggedInUser.fullName}</h3>
+            <h3>NAME: ${loggedInUser.name}</h3>
+            <h3>LAST NAME: ${loggedInUser.lastName}</h3>
+            <h3>E-MAIL: ${loggedInUser.email}</h3>
+
 
         </div>
-
+        </div>
 
     </div>
-</div>
+</div><br>
+
+<ul>
+    <li style="text-align: left"><a class="active" href="/user/home">Home</a></li>
+
+</ul>
+
 </body>
 </html>

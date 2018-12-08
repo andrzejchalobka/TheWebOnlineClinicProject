@@ -7,7 +7,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <html>
 <head>
-    <title>STRONA GLOWNA</title>
+    <title>OnLineClinicProject</title>
     <style>
         body {
             font-size: 18px;
@@ -53,8 +53,8 @@
 
 
 <ul>
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#Doctor">Twoj Profil</a></li>
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="/user/userinfo">Your`s Profile</a></li>
     <li><a href="#Doctor">Twoi Lekarze</a></li>
     <li><a href="#Search">Sprawdz nasza placowke</a></li>
     <li><a href="#Institution">Skontaktuj sie z nami</a></li>
