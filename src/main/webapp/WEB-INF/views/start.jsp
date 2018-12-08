@@ -17,11 +17,12 @@
 <body>
 
 
-<div class="w3-container" style="text-align: center">
+<div class="w3-container" style="text-align: center" >
+
     <h2><strong>Welcome on the official site of OnLineClinicProject</strong></h2><br>
 
 
-
+        <div style="border: 5px ridge #1C6EA4;">
     <p>Do You have an account please sign in </p>
 
 
@@ -30,7 +31,7 @@
     <br><p>You don`t have an account, please free registry </p><br>
 
     <a href="/registration" class="button1"/>Registration</a><br>
-
+</div>
 <%--</div>--%>
 </div>
 

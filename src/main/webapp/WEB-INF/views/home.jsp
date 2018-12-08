@@ -3,6 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
+<link rel="stylesheet" href="/resources/css/tableOfContent.css">
 <link rel="stylesheet" href="/resources/css/openingpage.css">
 
 
@@ -13,8 +14,11 @@
 <body>
 <%--${user}--%>
 <div style="text-align: center">
-    Welcome <strong>${loggedInUser.name}</strong>
-    Yours current e-mail adress <strong>${user}</strong>
+    Welcome <strong>${loggedInUser.name}</strong><br>
+    Yours current e-mail adress <strong>${user}</strong><br>
+</div>
+<div class="tableofcontent">
+aa
 </div>
 </body>
 </html>

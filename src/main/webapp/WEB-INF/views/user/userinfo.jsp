@@ -11,28 +11,42 @@
     <title>User Info</title>
 
     <style>
-        body{
+        body {
             background-image: url("/resources/img/about.jpg");
-        }
-        li {
-            float: left;
-        }
 
-        li a {
-            display: block;
-            color: white;
-            text-align: -moz-left;
-            padding: 14px 16px;
+        }
+        .button1 {
+            display: initial;
+            padding: 15px 25px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
             text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #111;
-        }
-
-        .active {
+            outline: none;
+            color: #fff;
             background-color: #3399FF;
+            border: none;
+            border-radius: 15px;
+            /*box-shadow: 0 9px #999;*/
+            /*align-self: center;*/
+            list-style-type: none;
         }
+
+        .button1:hover {
+            background-color: #b7efef;
+
+        }
+
+        .button1:active {
+            background-color: #b7efef;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+
+        }
+        ul{
+            list-style-type:none;
+        }
+
 
     </style>
 </head>
@@ -52,6 +66,10 @@
             <h3>NAME: ${loggedInUser.name}</h3>
             <h3>LAST NAME: ${loggedInUser.lastName}</h3>
             <h3>E-MAIL: ${loggedInUser.email}</h3>
+            <h5><ul>
+                <li style="text-align: left"><a class="button1" href="/user/home">Home</a></li>
+
+            </ul></h5>
 
 
         </div>
@@ -60,10 +78,6 @@
     </div>
 </div><br>
 
-<ul>
-    <li style="text-align: left"><a class="active" href="/user/home">Home</a></li>
-
-</ul>
 
 </body>
 </html>

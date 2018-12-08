@@ -54,7 +54,7 @@
 
 <ul>
     <li><a class="active" href="/">Home</a></li>
-    <li><a href="/user/userinfo">Your`s Profile</a></li>
+    <li><a href="/user/userinfo">Yours Profile</a></li>
     <li><a href="#Doctor">Twoi Lekarze</a></li>
     <li><a href="#Search">Sprawdz nasza placowke</a></li>
     <li><a href="#Institution">Skontaktuj sie z nami</a></li>
