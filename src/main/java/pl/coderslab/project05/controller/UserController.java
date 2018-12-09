@@ -103,7 +103,7 @@ public String AddUser(@Valid @ModelAttribute User user, BindingResult result) {
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable long id) {
         userRepository.deleteById(id);
-        return "redirect:/admin/user/showall";
+        return "redirect:/user/showall";
     }
 
     @GetMapping("/edit/{id}")
