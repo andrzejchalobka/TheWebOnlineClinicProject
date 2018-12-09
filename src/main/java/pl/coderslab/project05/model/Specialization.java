@@ -32,4 +32,8 @@ public class Specialization {
     @OneToMany(mappedBy = "specialization", fetch = FetchType.LAZY)
     private List<Doctor> doctors = new ArrayList<>();
 
+    public String getFullType(){
+        return id + " " + specialType;
+    }
+
 }

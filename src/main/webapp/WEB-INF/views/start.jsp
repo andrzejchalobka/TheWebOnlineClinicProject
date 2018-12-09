@@ -35,21 +35,6 @@
 <%--</div>--%>
 </div>
 
-<%--<div class="w3-container w3-section w3-blue" style="text-align: center">--%>
-    <%--<h1>LINK1</h1>--%>
-<%--</div>--%>
-<%--<div class="w3-container w3-section w3-blue" style="text-align: center">--%>
-    <%--<h1>LINK2</h1>--%>
-<%--</div>--%>
-
-
-
-
-
-    <%--<button class="button1">Login </button>--%>
-    <%--<button class="button1">Register</button>--%>
-    <%--<a href="/login" class="button1"/>Login</a>--%>
-    <%--<a href="/registration" class="button1"/>Registration</a>--%>
 
 
 
