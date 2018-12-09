@@ -22,14 +22,5 @@
 
 </form:form>
 
-
-<%--<form:form method="post" modelAttribute="user">--%>
-    <%--First Name : <br><form:input path="firstName"/><br>--%>
-    <%--Last Name : <br><form:input path="lastName"/><br>--%>
-    <%--Email : <br><form:input path="email"/><br>--%>
-    <%--<form:errors path="*"/>--%>
-    <%--<form:hidden path="id"/>--%>
-    <%--<input type="submit" value="Send"/>--%>
-<%--</form:form>--%>
 </body>
 </html>

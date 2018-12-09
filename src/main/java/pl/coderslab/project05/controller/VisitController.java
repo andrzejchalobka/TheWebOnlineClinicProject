@@ -93,7 +93,7 @@ public class VisitController {
 
         model.addAttribute("visits", visits);
 
-        return "visits/allvisit3";
+        return "visits/allvisit";
     }
 
     @GetMapping("/delete/{id}")

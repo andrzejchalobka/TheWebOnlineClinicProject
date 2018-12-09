@@ -6,7 +6,7 @@ REPLACE INTO `role` VALUES (1,'ADMIN');
 
 insert into specialization values (default, 'Okulista'), (default, 'Laryngolog');
 insert into doctor values (default, 'Roman', 'Kowal', 1), (default, 'Anna', 'Nowak', 2);
-insert into institution values (default, 'zagrody','5','krakow'), (default, 'wolnego','1','katowice');
+insert into institution values (default, 'ul.Zagrody','5','krakow'), (default, 'ul.Wolnego','1','katowice');
 
 --drop database log;
 --create database log;

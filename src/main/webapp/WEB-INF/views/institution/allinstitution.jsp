@@ -21,6 +21,9 @@
         <th class="text-left">TOWN</th>
         <th class="text-left">ADRESS</th>
         <th class="text-left">NUMBER</th>
+        <%--<th class="text-left">ADD</th>--%>
+
+
         <th class="text-left">EDIT</th>
         <th class="text-left">ERASE</th>
 
@@ -35,6 +38,11 @@
         <td class="text-left">${institution.adress}</td>
         <td class="text-left">${institution.number}</td>
 
+
+        <%--<td class="text-left"><a href="/admin/institution/add"><img src="/resources/img/add.png"--%>
+                                                                                       <%--alt="Add"--%>
+                                                                                       <%--style="width:22px;height:22px;border:0"></a>--%>
+        <%--</td>--%>
 
         <td class="text-left"><a href="/admin/institution/edit/${institution.id}"><img src="/resources/img/edit.png"
                                                                                        alt="Edit"

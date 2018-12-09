@@ -37,6 +37,9 @@
     <tr>
         <th class="text-left">TYPE</th>
         <th class="text-left">SHOW</th>
+        <th class="text-left">ADD</th>
+
+
     </tr>
     </thead>
     <tbody class="table-hover">
@@ -45,11 +48,18 @@
         <td class="text-left"><a href="/admin/institution/show">
             <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
         </a></td>
+        <td class="text-left"><a href="/admin/institution/add">
+            <img src="/resources/img/add.png" alt="LINK" style="width:22px;height:22px;border:0">
+        </a></td>
+
     </tr>
     <tr>
         <td class="text-left">SPECIALIZATION</td>
         <td class="text-left"><a href="/admin/specialization/show">
             <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
+        </a></td>
+        <td class="text-left"><a href="/admin/specialization/add">
+            <img src="/resources/img/add.png" alt="LINK" style="width:22px;height:22px;border:0">
         </a></td>
     </tr>
     <tr>
@@ -57,17 +67,26 @@
         <td class="text-left"><a href="/admin/doctor/show">
             <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
         </a></td>
+        <td class="text-left"><a href="/admin/doctor/add">
+            <img src="/resources/img/add.png" alt="LINK" style="width:22px;height:22px;border:0">
+        </a></td>
     </tr>
     <tr>
         <td class="text-left">USER</td>
-        <td class="text-left"><a href="/admin/user/show">
+        <td class="text-left"><a href="/user/showall">
             <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
+        </a></td>
+        <td class="text-left"><a href="/user/add">
+            <img src="/resources/img/add.png" alt="LINK" style="width:22px;height:22px;border:0">
         </a></td>
     </tr>
     <tr>
         <td class="text-left">VISITS</td>
         <td class="text-left"><a href="/admin/visit/show">
             <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
+        </a></td>
+        <td class="text-left"><a href="/admin/visit/add">
+            <img src="/resources/img/add.png" alt="LINK" style="width:22px;height:22px;border:0">
         </a></td>
     </tr>
     </tbody>

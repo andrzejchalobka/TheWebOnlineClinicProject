@@ -5,13 +5,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.project05.model.User;
 import pl.coderslab.project05.model.Visit;
 import pl.coderslab.project05.repository.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -42,6 +42,9 @@ public class UserController {
 
 
 
+
+
+
     @GetMapping("/home")
     public String goHomeStart(@ModelAttribute User user, Model model ) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -68,6 +71,56 @@ public class UserController {
         model.addAttribute("loggedInUser",loggedInUser);
         return "user/userinfo";
     }
+
+////CRUD USER///
+
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public String AddUser(Model model) {
+        User user = new User();
+        model.addAttribute("user", user);
+        return "user/adduser";
+
+    }
+@RequestMapping(value = "/add", method = RequestMethod.POST)
+public String AddUser(@Valid @ModelAttribute User user, BindingResult result) {
+    if (result.hasErrors()) {
+        return "user/adduser";
+    }
+    userRepository.save(user);
+    return "redirect:/user/showall";
+
+}
+
+    @RequestMapping(path = "/showall", method = RequestMethod.GET)
+    public String showUser(Model model) {
+
+        List<User> users = userRepository.findAll();
+        model.addAttribute("users", users);
+
+        return "user/allusers";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteUser(@PathVariable long id) {
+        userRepository.deleteById(id);
+        return "redirect:/admin/user/showall";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String editUser(Model model, @PathVariable long id) {
+        model.addAttribute("user", userRepository.findById(id));
+        return "user/adduser";
+    }
+
+    @PostMapping("edit/**")
+    public String editUser(@Valid @ModelAttribute User user, BindingResult result) {
+        if (result.hasErrors()) {
+            return "user/adduser";
+        }
+        userRepository.save(user);
+        return "redirect:/admin/user/showall";
+    }
+
 
 
 
