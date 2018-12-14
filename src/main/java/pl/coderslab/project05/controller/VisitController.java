@@ -59,7 +59,7 @@ public class VisitController {
 
     @ModelAttribute("hours")
     public Collection<VisitTime> getHours() {
-        VisitTime[] visitTimes = {new VisitTime("09:00"),new VisitTime("09:30"),new VisitTime("10:00"),new VisitTime("10:30")};
+        VisitTime[] visitTimes = {new VisitTime("09:00"),new VisitTime("09:30"),new VisitTime("10:00"),new VisitTime("10:30"),new VisitTime("11:00"),new VisitTime("11:30"),new VisitTime("12:00"),new VisitTime("12:30"),new VisitTime("13:00"),new VisitTime("13:30"),new VisitTime("14:00"),new VisitTime("14:30"),new VisitTime("15:00"),new VisitTime("15:30")};
 
         return Arrays.asList(visitTimes);
     }

@@ -1,49 +1,76 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="/resources/css/formforvisit.css">
 <head>
     <title>Add Visit</title>
 </head>
 <body>
 
+<div class="container">
+    <div class="row">
+        <form:form method="post" modelAttribute="visit" role="form" class="col-md-9 go-right">
 
-<form:form method="post" modelAttribute="visit">
+            <h2>Add Visit</h2>
 
-
-    Data : <br> <form:input path="dateOfVisit" type="date"/><br>
-
-    Time : <br> <form:select path="timeOfVisit" items="${hours}" itemValue="hourMinute" itemLabel="hourMinute"/><br>
-
-    Doctor:<br> <form:select path="doctor.id" items="${doctors}" itemValue="id" itemLabel="fullName"/><br>
-
-
-    Institution: <form:select path="institution.id" items="${institutions}" itemValue="id" itemLabel="adress"/>
-
-
-    <form:errors path="*"/>
-    <form:hidden path="id"/>
-    <input type="submit" value="Add Visit"/>
+            <div class="form-group">
+                <%--<h3>Add a Date </h3>--%>
+                <form:input path="dateOfVisit" type="date" class="form-control"/>
+                <%--<input id="specialType" name="specialType" type="specialType" class="form-control" required>--%>
+<%----%>
+                <label for="dateOfVisit">Add a date</label>
+            </div>
 
 
-</form:form>
+            <div class="form-group">
+                <h3>Add a Time </h3>
+                <form:select path="timeOfVisit" items="${hours}" itemValue="hourMinute" itemLabel="hourMinute"/></br>
+                <%--<input id="specialType" name="specialType" type="specialType" class="form-control" required>--%>
+<%----%>
+               <%--<br> <label for="timeOfVisit">Add a time</label>--%>
+
+            </div>
+            <div class="form-group">
+                <h3>Add a Doctor</h3>
+                <form:select path="doctor.id" items="${doctors}" itemValue="id" itemLabel="fullName"/>
+                    <%--<input id="specialType" name="specialType" type="specialType" class="form-control" required>--%>
+                    <%----%>
+                    <%--<label for="doctor.id">Add a specialization</label>--%>
+
+            </div>
+
+            <div class="form-group">
+                <h3>Add a Institution</h3>
+                <form:select path="institution.id" items="${institutions}" itemValue="id" itemLabel="AllAdress"/>
+                    <%--<input id="specialType" name="specialType" type="specialType" class="form-control" required>--%>
+                    <%----%>
+                    <%--<label for="specialType">Add a specialization</label>--%>
+
+            </div>
 
 
-<%--<form:form method="post" modelAttribute="visit">--%>
 
 
-<%--Name :<br><form:input path="name"/><br>--%>
-
-<%--Surname: <br><form:input path="surname"/><br>--%>
 
 
-<%--Specizalization : <br><form:select path="specialization.id" items="${specialization}" itemValue="id" itemLabel="specialType"/><br>--%>
 
 
-<%--<form:errors path="*"/>--%>
-<%--<form:hidden path="id"/>--%>
-<%--<input type="submit" value="Add Doctor"/>--%>
 
-<%--</form:form>--%>
+
+            <form:errors path="*"/>
+            <form:hidden path="id"/>
+            <input type="submit" value="Add Visit"/>
+
+        </form:form>
+    </div>
+</div>
+
+
+
 
 </body>
 </html>

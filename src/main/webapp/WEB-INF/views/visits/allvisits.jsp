@@ -23,16 +23,7 @@
 
 </c:forEach>
 
-<%--<c:forEach items="${specializations}" var="specializations">--%>
 
-    <%--${institution.id}--%>
-    <%--${institution.town}--%>
-    <%--${institution.adress}--%>
-    <%--${institution.number}--%>
-    <%--${specializations.id}--%>
-    <%--${specializations.specialType}--%>
-
-<%--</c:forEach>--%>
 
 </body>
 </html>

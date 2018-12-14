@@ -81,7 +81,7 @@
         </a></td>
     </tr>
     <tr>
-        <td class="text-left">VISITS</td>
+        <td class="text-left">VISITS USER</td>
         <td class="text-left"><a href="/admin/visit/show">
             <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
         </a></td>
