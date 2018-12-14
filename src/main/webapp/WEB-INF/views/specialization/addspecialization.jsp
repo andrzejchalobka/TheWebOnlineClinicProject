@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
 <form:form method="post" modelAttribute="specialization" role="form" class="col-md-9 go-right">
-        <%--<form:form method="post" modelAttribute="institution" >--%>
+
             <h2>Add Specialization</h2>
 
             <div class="form-group">
@@ -27,26 +27,13 @@
             <form:errors path="*"/>
             <form:hidden path="id"/>
             <input type="submit" value="Add Specialization"/>
-            <%--<p class="bg-success" style="padding:10px;margin-top:20px;clear:both"><small><a href="http://css-tricks.com/float-labels-css/" target="_blank">Link</a> to original article</small></p>--%>
+
         </form:form>
     </div>
 </div>
 
 
-<%--<form:form method="post" modelAttribute="institution">--%>
 
-
-<%--Town :<br><form:input path="town"/>--%>
-
-<%--Adress: <br><form:input path="adress"/>--%>
-
-<%--Number : <br><form:input path="number"/>--%>
-
-<%--<form:errors path="*"/>--%>
-<%--<form:hidden path="id"/>--%>
-<%--<input type="submit" value="Add Institution"/>--%>
-
-<%--</form:form>--%>
 
 </body>
 </html>

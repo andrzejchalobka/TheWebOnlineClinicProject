@@ -2,6 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:include page="/user/main"/>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -11,6 +12,9 @@
     <style>
         body {
             font-size: 18px;
+            background-image: url("/resources/img/about-bg2.png");
+            background-repeat: repeat;
+            background-position: right top;
         }
 
         ul {
@@ -41,7 +45,7 @@
         }
 
         .active {
-            background-color: #4CAF50;
+            background-color: #3399FF;
         }
     </style>
 
@@ -52,18 +56,10 @@
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
 
-<ul>
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#Doctor">Twoj Profil</a></li>
-    <li><a href="#Doctor">Twoi Lekarze</a></li>
-    <li><a href="#Search">Sprawdz nasza placowke</a></li>
-    <li><a href="#Institution">Skontaktuj sie z nami</a></li>
-    <li style="float:right"><a class="active" href="#about">Wyloguji</a></li>
-</ul>
 
 
 
-<div>TWOJE WIZYTY</div>
+<div style="text-align: center">Yours Visits</div>
 
 
 
@@ -107,8 +103,8 @@
 
 
 
-                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="/admin/visit/edit/${visit.id}" data-target="/admin/visit/edit/${visit.id}" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="/admin/visit/delete/${visit.id}" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
                     </tr>
                     </c:forEach>
 
@@ -116,16 +112,7 @@
 
                 </table>
 
-                <%--<div class="clearfix"></div>--%>
-                <%--<ul class="pagination pull-right">--%>
-                    <%--<li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>--%>
-                    <%--<li class="active"><a href="#">1</a></li>--%>
-                    <%--<li><a href="#">2</a></li>--%>
-                    <%--<li><a href="#">3</a></li>--%>
-                    <%--<li><a href="#">4</a></li>--%>
-                    <%--<li><a href="#">5</a></li>--%>
-                    <%--<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>--%>
-                <%--</ul>--%>
+
 
             </div>
 

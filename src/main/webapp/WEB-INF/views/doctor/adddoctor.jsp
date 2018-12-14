@@ -1,34 +1,60 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: andrzej
-  Date: 01.12.18
-  Time: 16:46
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="/resources/css/form.css">
 <head>
-    <title>Add Doctor</title>
+    <title>Add institution</title>
 </head>
 <body>
 
-<form:form method="post" modelAttribute="doctor">
+<div class="container">
+    <div class="row">
+        <form:form method="post" modelAttribute="doctor" role="form" class="col-md-9 go-right">
+            <h2>Add Doctor</h2>
+
+            <div class="form-group">
+                <input id="name" name="name" type="text" class="form-control" required>
+
+                <label for="name">Add Name</label>
+            </div>
+            <div class="form-group">
+                <input id="surname" name="surname" type="text" class="form-control" required>
+                <label for="surname">Add a surname</label>
+            </div>
+            <div class="form-group">
+                <form:select path="specialization.id" items="${specialization}" itemValue="id" itemLabel="specialType"/>
+                <%--<input id="number" name="number" type="text" class="form-control" required>       </input>--%>
+                <%--<label for="number">Add a Number</label>--%>
+            </div>
+
+            <form:errors path="*"/>
+            <form:hidden path="id"/>
+            <input type="submit" value="Add Doctor"/>
+            <%--<p class="bg-success" style="padding:10px;margin-top:20px;clear:both"><small><a href="http://css-tricks.com/float-labels-css/" target="_blank">Link</a> to original article</small></p>--%>
+        </form:form>
+        <br><a href="/user/home">BACK TO ADMIN PANEL</a>
+    </div>
+</div>
 
 
-    Name :<br><form:input path="name"/><br>
-
-    Surname: <br><form:input path="surname"/><br>
+<%--<form:form method="post" modelAttribute="institution">--%>
 
 
-    Specizalization : <br><form:select path="specialization.id" items="${specialization}" itemValue="id" itemLabel="specialType"/><br>
+<%--Town :<br><form:input path="town"/>--%>
 
+<%--Adress: <br><form:input path="adress"/>--%>
 
-    <form:errors path="*"/>
-    <form:hidden path="id"/>
-    <input type="submit" value="Add Doctor"/>
+<%--Number : <br><form:input path="number"/>--%>
 
-</form:form>
+<%--<form:errors path="*"/>--%>
+<%--<form:hidden path="id"/>--%>
+<%--<input type="submit" value="Add Institution"/>--%>
+
+<%--</form:form>--%>
 
 </body>
 </html>

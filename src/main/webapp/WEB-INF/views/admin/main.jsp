@@ -5,6 +5,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
 <html>
 <head>
     <title>OnLineClinicProject</title>
@@ -55,6 +57,8 @@
 <ul>
     <li><a class="active" href="/user/home">Home</a></li>
     <li><a href="/user/userinfo">Yours Profile</a></li>
+    <li><a href="/admin/visit/show">Yours Visits</a></li>
+
     <li><a href="/admin/doctor/yoursdoctor">Yours Doctor</a></li>
     <li><a href="/admin/institution/info">Institutions</a></li>
 

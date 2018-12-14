@@ -35,6 +35,7 @@
             <input type="submit" value="Add Institution"/>
         <%--<p class="bg-success" style="padding:10px;margin-top:20px;clear:both"><small><a href="http://css-tricks.com/float-labels-css/" target="_blank">Link</a> to original article</small></p>--%>
         </form:form>
+        <a href="/user/home">BACK TO ADMIN PANEL</a>
     </div>
 </div>
 
