@@ -115,7 +115,7 @@
                 </div>
             <form:hidden path="id"/>
             <%--<form:errors path="*"/>--%>
-                <input class ="button1" type="submit" value="Log In" >
+                <input class ="button1" type="submit" value="Log In"  >
                 </div>
             </form>
         </div>

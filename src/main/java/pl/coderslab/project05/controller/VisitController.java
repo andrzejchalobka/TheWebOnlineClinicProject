@@ -121,6 +121,16 @@ public class VisitController {
         return "redirect:/admin/visit/show";
     }
 
+    @RequestMapping(path = "/showallbyadmin", method = RequestMethod.GET)
+    public String AllVisitByAdmin(Model model) {
+        //Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        //String currentPrincipalEmail = authentication.getName();
+       // List<Visit> visits = visitRepository.findAllByUserEmail(currentPrincipalEmail);
+//        model.addAttribute("visits", visits);
+        List<Visit> visits = visitRepository.findAll();
+        model.addAttribute("visits",visits);
 
+        return "visits/allvisits2";
+    }
 
 }

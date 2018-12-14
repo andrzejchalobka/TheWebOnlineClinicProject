@@ -59,7 +59,7 @@
 
 
 
-<div style="text-align: center">Yours Visits</div>
+<div style="text-align: center">Yours Visits ${visit.user.fullName}</div>
 
 
 
@@ -97,7 +97,7 @@
                         <td>${visit.dateOfVisit}</td>
                         <td>${visit.timeOfVisit}</td>
                         <td>${visit.doctor.specialization.specialType}</td>
-                        <td>${visit.institution.adress}</td>
+                        <td>${visit.institution.allAdress}</td>
 
 
 

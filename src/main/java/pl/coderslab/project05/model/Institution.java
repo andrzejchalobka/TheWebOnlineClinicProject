@@ -38,7 +38,7 @@ public class Institution {
 //    }
 
     public String getAllAdress() {
-        return adress + ", " + number +", " + town;
+        return adress + " " + number +", " + town;
     }
 
 }

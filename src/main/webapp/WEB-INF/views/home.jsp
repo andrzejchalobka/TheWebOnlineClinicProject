@@ -90,7 +90,32 @@
         </a></td>
     </tr>
     </tbody>
+</table><br>
+
+<%--<table align="left|right|center">--%>
+<table align="center"/>
+    <thead>
+    <tr>
+        <th class="text-left">ADMIN</th>
+        <th class="text-left">SHOW ALL</th>
+
+
+
+    </tr>
+    </thead>
+    <tbody class="table-hover">
+    <tr>
+        <td class="text-left"><strong>ADMIN VISITS</strong></td>
+        <td class="text-left"><a href="/admin/visit/showallbyadmin">
+            <img src="/resources/img/eye_black-512.png" alt="LINK" style="width:22px;height:22px;border:0">
+        </a></td>
+
+
+    </tr>
+
+    </tbody>
 </table>
+
 
 
 </body>
