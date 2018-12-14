@@ -7,32 +7,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
+<link rel="stylesheet" href="/resources/css/openingpage.css">
 <head>
-    <title>Title</title>
+    <%--<title>Info Institution</title>--%>
+    <%--<jsp:include page="admin/main.jsp"/>--%>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <%--hr {border-top: 1px solid #000; width:50%;}--%>
 
-    <%--a {color: #000;}--%>
-
-    <%--a:link{text-decoration:none;}--%>
-
-    <%--#contact2{--%>
-    <%--letter-spacing:3px;--%>
-    <%--}--%>
-
-
-
-    <%--#author a{--%>
-    <%--color: #fff;--%>
-    <%--text-decoration: none;--%>
-
-    <%--}--%>
 </head>
 <body>
 
 
+
 <div class="container">
-    <h1 class="text-center">Contact Address</h1>
+    <h1 class="text-center">Main Institution</h1>
     <hr>
     <div class="row">
         <div class="col-sm-8">
@@ -40,15 +27,15 @@
         </div>
 
         <div class="col-sm-4" id="contact2">
-            <h3>Sedi e Contatti</h3>
+            <h3>Contact</h3>
             <hr align="left" width="50%">
-            <h4 class="pt-2">Sede operativa</h4>
-            <i class="fas fa-globe" style="color:#000"></i> address<br>
-            <h4 class="pt-2">Contatti</h4>
-            <i class="fas fa-phone" style="color:#000"></i> <a href="tel:+"> 123456 </a><br>
-            <i class="fab fa-whatsapp" style="color:#000"></i><a href="tel:+"> 123456 </a><br>
+            <h4 class="pt-2">Katowice</h4>
+            <i class="fas fa-globe" style="color:#000"></i> Ul. Wolnego 4 <br>
+            <h4 class="pt-2">Contact</h4>
+            <i class="fas fa-phone" style="color:#000"></i> <a href="tel:+"> +48 12 34561121 </a><br>
+            <i class="fab fa-whatsapp" style="color:#000"></i><a href="tel:+"> +48 12 3456111 </a><br>
             <h4 class="pt-2">Email</h4>
-            <i class="fa fa-envelope" style="color:#000"></i> <a href="">test@test.com</a><br>
+            <i class="fa fa-envelope" style="color:#000"></i> <a href="">ClinicOnLine@gmail.com</a><br>
         </div>
     </div>
 </div>

@@ -22,7 +22,7 @@
     <h2><strong>Welcome on the official site of OnLineClinicProject</strong></h2><br>
 
 
-        <div style="border: 5px ridge #1C6EA4;">
+        <div >
     <p>Do You have an account please sign in </p>
 
 

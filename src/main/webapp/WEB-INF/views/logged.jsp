@@ -20,7 +20,7 @@
 
 
 <div class="title1">
-    <strong>Logged succesful</strong><br>
+    <strong>Logged successfully!</strong><br>
 
 
 <a href="/user/home" class="button1"/>Home</a><br>

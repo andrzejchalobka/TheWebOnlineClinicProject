@@ -23,7 +23,7 @@
         <th class="text-left">SURNANE</th>
         <th class="text-left">E-mail</th>
         <th class="text-left">PASSWORD</th>
-        <th class="text-left">ERASE</th>
+        <th class="text-left">EDIT</th>
         <th class="text-left">DELETE</th>
 
 

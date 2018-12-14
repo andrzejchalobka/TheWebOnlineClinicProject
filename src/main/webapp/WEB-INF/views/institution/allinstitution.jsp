@@ -19,7 +19,7 @@
     <tr>
         <th class="text-left">ID</th>
         <th class="text-left">TOWN</th>
-        <th class="text-left">ADRESS</th>
+        <th class="text-left">ADRESS      </th>
         <th class="text-left">NUMBER</th>
         <%--<th class="text-left">ADD</th>--%>
 

@@ -83,4 +83,9 @@ public class DoctorController {
         return "redirect:/admin/doctor/show";
     }
 
+
+    @GetMapping("/yoursdoctor")
+    public String YoursDoctor(){
+        return "doctor/yourdoctors";
+    }
 }
